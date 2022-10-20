@@ -1,0 +1,27 @@
+.contenedorNavbar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    background: rgba(255,255,255,0.25);
+    -webkit-backdrop-filter: blur(37px);
+    backdrop-filter: blur(37px);
+    border: 1px solid rgba(255,255,255,0.125);
+}
+.contenedorBrand{
+    margin-left: 10px;
+}
+.contenedorMenu{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    display: inline;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.tituloPagina{
+    font-style: italic;
+    color:#FAF7F0;
+}
