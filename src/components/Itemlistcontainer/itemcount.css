@@ -1,0 +1,9 @@
+.contenedorSumadorUnidades{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonRestar, .botonSumar{
+    height: 20px;
+    width: 20px;
+}
