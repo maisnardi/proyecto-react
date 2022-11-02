@@ -3,8 +3,8 @@ export const productos = [
         id:1,
         title: 'Remera con logo azul',
         price: 8000,
-        stock: 10,
-        category: 'Remera',
+        stock: 12,
+        category: 'remeras',
         img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457703/proyecto%20react%20coder/remera_lomtxg.jpg',
     },
     {
@@ -12,7 +12,7 @@ export const productos = [
         title: 'Gorra azul',
         price: 5000,
         stock: 15,
-        category: 'Gorra',
+        category: 'accesorios',
         img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457705/proyecto%20react%20coder/gorra_cju8uj.jpg',
     },
     {
@@ -20,7 +20,7 @@ export const productos = [
         title: 'Zapatillas Adidas blancas',
         price: 25000,
         stock: 5,
-        category: 'Zapatillas',
+        category: 'zapatillas',
         img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457702/proyecto%20react%20coder/zapatillas_sizm7f.jpg',
     },
     {
@@ -28,7 +28,15 @@ export const productos = [
         title: 'Pantalon',
         price: 15000,
         stock: 20,
-        category: 'Pantalon',
+        category: 'pantalones',
         img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457703/proyecto%20react%20coder/pantalon_emdpm1.jpg',
+    },
+    {
+        id:5,
+        title: 'Remera Montagne',
+        price: 8000,
+        stock: 5,
+        category: 'remeras',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667397082/proyecto%20react%20coder/remera_montagne_myc0eb.jpg',
     },
 ];

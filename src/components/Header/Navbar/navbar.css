@@ -25,3 +25,9 @@ li{
     font-style: italic;
     color:#FAF7F0;
 }
+
+.active{
+    border: 2px solid black;
+    padding: 3px;
+    border-radius: 7px;
+}

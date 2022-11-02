@@ -1,21 +1,21 @@
 import './App.css';
 import Header from './components/Header/Header';
+import ItemDatailContaiener from './components/Itemlistcontainer/ItemDetailContainer';
 import ItemListContainer from './components/Itemlistcontainer/ItemListContainer';
-import ItemCount from './components/Itemlistcontainer/ItemCount';
+import {BrowserRouter, Routes , Route} from 'react-router-dom'
 
 function App() {
-  const onAdd = (cantidad)=>{
-    console.log(`Se agregaron ${cantidad} productos al carrito`)
-  }
   return (
-    <>
+    <BrowserRouter>
       <Header/>
       <main>
-        <ItemListContainer saludo={'Bienvenidos a mundo ropa'}/>
-        <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-      </main>
-      
-    </>
+        <Routes>
+          <Route path='/' element= {<ItemListContainer saludo={'Bienvenidos a mundo ropa'}/>}/>
+          <Route path='/category/:id' element= {<ItemListContainer saludo={'Bienvenidos a mundo ropa'}/>}/>
+          <Route path='/item/:id' element={<ItemDatailContaiener/>}/>
+        </Routes>
+      </main>   
+    </BrowserRouter>
   );
 }
 

@@ -4,6 +4,8 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 0 0 20px 20px;
+    width: 284px;
+    height: 556px;
     /* -webkit-box-shadow: 3px 3px 10px 3px #747474;
     -moz-box-shadow: 3px 3px 10px 3px #747474;
     box-shadow: 3px 3px 10px 3px #747474; */
