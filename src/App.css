@@ -5,7 +5,5 @@
 
 body{
   height: 100vh;
-  background: #cdfcf6;
-  background: -webkit-linear-gradient(0deg, #cdfcf6 0%, #bccef8 50%, #98a8f8 100%);
-  background: linear-gradient(0deg, #cdfcf6 0%, #bccef8 50%, #98a8f8 100%);
+  background: #111111;
 }

@@ -11,17 +11,17 @@ const Navbar = () => {
       </div>
       <div className='contenedorMenu'>
         <ul>
-          <NavLink to={'/category/remeras'}>Remeras</NavLink>
+          <NavLink className={'links'} to={'/category/remeras'}>Remeras</NavLink>
           <li>|</li>
-          <NavLink to={'/category/pantalones'}>Pantalones</NavLink>
+          <NavLink className={'links'} to={'/category/pantalones'}>Pantalones</NavLink>
           <li>|</li>
-          <NavLink to={'/category/zapatillas'}>Zapatillas</NavLink>
+          <NavLink className={'links'} to={'/category/zapatillas'}>Zapatillas</NavLink>
           <li>|</li>
-          <NavLink to={'/category/accesorios'}>Accesorios</NavLink>
+          <NavLink className={'links'} to={'/category/accesorios'}>Accesorios</NavLink>
           <li>|</li>
-          <NavLink>Contacto</NavLink>
+          <NavLink className={'links'} >Contacto</NavLink>
           <li>|</li>
-          <NavLink>Mi cuenta</NavLink>
+          <NavLink className={'links'} >Mi cuenta</NavLink>
           <CartWidget/>
         </ul>
         

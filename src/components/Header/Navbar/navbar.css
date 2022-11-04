@@ -17,17 +17,22 @@
 }
 
 li{
+    font-size: 25px;
     display: inline;
     margin: 10px;
     font-family: 'Poppins', sans-serif;
 }
 .tituloPagina{
     font-style: italic;
-    color:#FAF7F0;
+    color:#E2703A;
 }
 
 .active{
     border: 2px solid black;
     padding: 3px;
     border-radius: 7px;
+}
+.links{
+    text-decoration: none;
+    color: #EEB76B;
 }

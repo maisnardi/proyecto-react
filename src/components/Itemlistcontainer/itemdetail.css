@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     border: 2px dotted black;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .contenedorImagenDetail{
@@ -17,6 +17,7 @@
 .contenedorInfoDetail{
     min-width: 60%;
     border: 2px dotted red;
+    color: antiquewhite;
 }
 .contenedorItemCount{
     min-width: 20%;
