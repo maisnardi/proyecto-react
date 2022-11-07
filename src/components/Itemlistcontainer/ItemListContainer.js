@@ -4,10 +4,10 @@ import { productos } from '../../mock/productos';
 import './itemlistcontainer.css'
 import ItemList from './ItemList';
 import {useParams} from 'react-router-dom'
+import ItemFilter from './ItemFilter';
 
 function ItemListContainer({saludo}) {
   const [items, setItems] = useState([]);
-
   const {id}= useParams();
 
   useEffect(() => {
@@ -33,7 +33,12 @@ function ItemListContainer({saludo}) {
   return (
     <div>
       <h1 className='saludoInicio'>{saludo}</h1>
-      <ItemList items={items} />
+      <div className='contenedorMain'>
+        <div className='contenedorFiltro'>
+          <ItemFilter/>
+        </div>
+        <ItemList items={items} />
+      </div>
     </div>
   )
 }

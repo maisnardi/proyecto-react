@@ -1,0 +1,11 @@
+.contenedorBotTalles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.contenedorBotTalles button{
+    min-width: 50px;
+    min-height: 50px;
+}

@@ -7,12 +7,15 @@ const Item = ({producto}) => {
     <div className='contenedorProducto'>
       <div className='contenedorImagenCard'>
         <img src={producto.img} width="284px" alt={producto.title}></img>
+        <div className='separador'></div>
       </div>
-        <article>
-            <h2>{producto.title}</h2>
-            <h3>Precio: ${producto.price}</h3>
-            <Link to={`/item/${producto.id}`}><button>Ver producto</button></Link>
-        </article>
+      <div className='contenedorDatosItem' >
+        <h2>{producto.title}</h2>
+        <h3>Precio: ${producto.price}</h3>
+      </div>
+      <article className='contenedorVerProducto'>
+          <Link to={`/item/${producto.id}`}><button>Ver producto</button></Link>
+      </article>
     </div>
   )
 }

@@ -3,21 +3,32 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    column-gap: 50px;
     border: 2px dotted black;
     border-radius: 20px;
+    margin-top: 40px;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    -webkit-box-shadow: 3px 3px 10px 3px #747474;
+    -moz-box-shadow: 3px 3px 10px 3px #747474;
+    box-shadow: 3px 3px 10px 3px #747474;
 }
 
 .contenedorImagenDetail{
     border: 2px dotted blue;
 }
 .contenedorImagenDetail img{
-    max-width: 100%
+    max-width: 100%;
+    border-radius: 20px;
 }
 
 .contenedorInfoDetail{
-    min-width: 60%;
+    min-width: 40%;
     border: 2px dotted red;
-    color: antiquewhite;
+    color: black;
 }
 .contenedorItemCount{
     min-width: 20%;

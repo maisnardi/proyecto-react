@@ -23,13 +23,13 @@ li{
     font-family: 'Poppins', sans-serif;
 }
 .tituloPagina{
+    text-decoration: none;
     font-style: italic;
     color:#E2703A;
 }
-
 .active{
-    border: 2px solid black;
     padding: 3px;
+    border: 2px solid black;
     border-radius: 7px;
 }
 .links{

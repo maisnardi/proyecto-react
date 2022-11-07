@@ -7,7 +7,7 @@ export const productos = [
         stock: 12,
         color: 'veige',
         category: 'remeras',
-        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457703/proyecto%20react%20coder/remera_lomtxg.jpg',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667570553/proyecto%20react%20coder/remera_lomtxg-mod_cudsef.jpg',
     },
     {
         id:2,
@@ -17,7 +17,7 @@ export const productos = [
         color: 'azul',
         stock: 15,
         category: 'accesorios',
-        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457705/proyecto%20react%20coder/gorra_cju8uj.jpg',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667605041/proyecto%20react%20coder/gorra-mod_czpwtn.jpg',
     },
     {
         id:3,
@@ -27,7 +27,7 @@ export const productos = [
         stock: 5,
         color: 'blaco',
         category: 'zapatillas',
-        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457702/proyecto%20react%20coder/zapatillas_sizm7f.jpg',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667604562/proyecto%20react%20coder/zapatillas_blancas-mod_cu2gxz.jpg',
     },
     {
         id:4,
@@ -37,7 +37,7 @@ export const productos = [
         color: 'jean azul',
         stock: 20,
         category: 'pantalones',
-        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1666457703/proyecto%20react%20coder/pantalon_emdpm1.jpg',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667606331/proyecto%20react%20coder/pantalon-mod_o0cv0e.jpg',
     },
     {
         id:5,
@@ -47,6 +47,17 @@ export const productos = [
         color: 'verde',
         stock: 5,
         category: 'remeras',
-        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667397082/proyecto%20react%20coder/remera_montagne_myc0eb.jpg',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667570080/proyecto%20react%20coder/remera_montagne-mod_wptzbv.jpg',
     },
+    {
+        id:6,
+        title: 'Remera gris',
+        price: 8000,
+        size: 'S',
+        color: 'gris',
+        stock: 7,
+        category: 'remeras',
+        img: 'https://res.cloudinary.com/dho3gtxbk/image/upload/v1667569456/proyecto%20react%20coder/remera_gris-mod_yiopcb.jpg',
+    },
+
 ];

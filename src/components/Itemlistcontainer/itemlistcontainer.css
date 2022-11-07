@@ -1,5 +1,16 @@
 .saludoInicio{
     font-family: 'Poppins', sans-serif;
-    color: antiquewhite;
-    padding:30px 0;
+    color: black;
+    padding:30px 0 50px 20px;
+}
+.contenedorMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    max-width: 75%;
+    margin: 0 auto;
+}
+.contenedorFiltro{
+    min-width: 264px;
 }
