@@ -37,7 +37,9 @@ function ItemListContainer({saludo}) {
         <div className='contenedorFiltro'>
           <ItemFilter/>
         </div>
-        <ItemList items={items} />
+        <div className='contenedorItemList'>
+          <ItemList items={items} />
+        </div>
       </div>
     </div>
   )

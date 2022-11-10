@@ -27,10 +27,8 @@ li{
     font-style: italic;
     color:#E2703A;
 }
-.active{
-    padding: 3px;
-    border: 2px solid black;
-    border-radius: 7px;
+a .active{
+    font-size: 30px;
 }
 .links{
     text-decoration: none;

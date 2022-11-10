@@ -14,6 +14,8 @@ function App() {
           <Route path='/' element= {<ItemListContainer saludo={'Bienvenidos a MundoRopa'}/>}/>
           <Route path='/category/:id' element= {<ItemListContainer saludo={'Bienvenidos a MundoRopa'}/>}/>
           <Route path='/category/:id' element= {<ItemFilter/>}/>
+          <Route path='/size/:size' element={<ItemListContainer/>} />
+          <Route path='/size/:size' element= {<ItemFilter/>}/>
           <Route path='/item/:id' element={<ItemDatailContaiener/>}/>
         </Routes>
       </main>   
