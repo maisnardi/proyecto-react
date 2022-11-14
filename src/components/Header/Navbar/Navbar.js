@@ -22,7 +22,7 @@ const Navbar = () => {
           <NavLink className={'links'} >Contacto</NavLink>
           <li>|</li>
           <NavLink className={'links'} >Mi cuenta</NavLink>
-          <Link className='links'><CartWidget/></Link>
+          <Link className={'links'} to={'/cart'}><CartWidget/></Link>
         </ul>
       </div>
       
