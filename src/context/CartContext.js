@@ -69,6 +69,7 @@ const CartProvider = (props) => {
       });
       return contador;
     }
+    
       return (
     <CartContext.Provider value={{cart, addToCart,  deleteAll, isInCart,totalUnidades,totalPrecio,deleteOne}}>
         {props.children}

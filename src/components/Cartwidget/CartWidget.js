@@ -10,7 +10,7 @@ const CartWidget = () => {
       <span className='material-symbols-outlined'>
           shopping_cart
       </span>
-    <span>{totalUnidades()}</span>
+    <span className='muestraUnidades'>{totalUnidades()}</span>
     </>
 
   )

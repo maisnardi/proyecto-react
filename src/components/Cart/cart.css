@@ -33,3 +33,23 @@
     flex-direction: row;
     justify-content: space-around;
 }
+.contenedorSinProd{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.botonProductos{
+    background-color: #085cd8;
+    color: antiquewhite;
+    font-size: 20px;
+    margin: 20px;
+    min-width: 300px;
+    min-height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
