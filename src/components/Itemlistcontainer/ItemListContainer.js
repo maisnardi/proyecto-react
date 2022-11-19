@@ -5,9 +5,11 @@ import './itemlistcontainer.css'
 import ItemList from './ItemList';
 import {useParams} from 'react-router-dom'
 import ItemFilter from './ItemFilter';
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 function ItemListContainer({saludo}) {
   const [items, setItems] = useState([]);
+  const [loading, setLoading]= useState(true)
   const {id}= useParams();
 
   useEffect(() => {
@@ -27,8 +29,19 @@ function ItemListContainer({saludo}) {
       })
       .catch((error) => {
         console.log(error);
-      });   
+      })
+      .finally(()=>{
+        setLoading(false);
+      }); 
+      return ()=> setLoading(true)  
   }, [id]);
+
+  if(loading){
+    return(
+      <div className='contenedorSpinner'>
+        <ScaleLoader color="#ad6d32" height={60}  />
+      </div>
+      )}
 
   return (
     <div>

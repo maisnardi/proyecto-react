@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react';
 import { productos } from '../../mock/productos';
 import './itemdetailcontainer.css'
 import ItemDetail from './ItemDetail';
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom';
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 function ItemDatailContaiener() {
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true)
   const {id}= useParams();
 
     useEffect(() => {
@@ -24,12 +26,24 @@ function ItemDatailContaiener() {
             })
             .catch((error) => {
                 console.log(error);
+            })
+            .finally(()=>{
+              setLoading(false);
             });
+
+        return ()=> setLoading(true)
     }, [id]);
-    console.log(item)
+
+  if(loading){
+    return(
+      <div className='contenedorSpinner'>
+        <ScaleLoader color="#ad6d32" height={60}  />
+      </div>
+      )}
+
   return (
     <div>
-      <ItemDetail producto={item}/>
+      <ItemDetail producto={item} inicial={3}/>
     </div>
   )
 }

@@ -5,16 +5,10 @@ function ItemCount({ stock, initial, onAdd}) {
     const [unidad, setUnidad]=useState(initial)
 
     const sumar=()=>{
-        if(unidad<stock)
-        {
-            setUnidad(unidad+1);
-        }
+        unidad<stock && setUnidad(unidad+1);
     }
     const restar=()=>{
-        if(unidad >1 )
-        {
-            setUnidad(unidad-1);
-        }
+        unidad>1 && setUnidad(unidad-1);
     }
 
     return (

@@ -23,6 +23,18 @@ const CartProvider = (props) => {
     }
     console.log(cart)
     
+    //funcion que verifica la cantidad de un mismo producto agregado al carrito NO BORRAR
+    const iniUnidades= (producto)=>{
+      if(isInCart(producto.id)){
+        const copia=[...cart];
+        const elementoCarro = copia.find((prod)=>prod.id===producto.id)
+        const inicial=elementoCarro.cantidad;
+        return inicial;
+      }
+      else
+      return 0;
+    }
+
     //funcion que suma al carrito solo las unidades cuando ya existe el item en el cart
     const sumarUnidades=(item, cantidad)=>{
       const cartActualizado=cart.map((prodDelCarrito)=>{
@@ -71,7 +83,7 @@ const CartProvider = (props) => {
     }
     
       return (
-    <CartContext.Provider value={{cart, addToCart,  deleteAll, isInCart,totalUnidades,totalPrecio,deleteOne}}>
+    <CartContext.Provider value={{cart, addToCart,  deleteAll, isInCart,totalUnidades,totalPrecio,deleteOne,iniUnidades}}>
         {props.children}
     </CartContext.Provider>
   )
