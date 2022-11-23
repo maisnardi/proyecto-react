@@ -1,0 +1,88 @@
+.contenedorCheckout{
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    -webkit-box-shadow: 3px 3px 10px 3px #747474;
+    -moz-box-shadow: 3px 3px 10px 3px #747474;
+    box-shadow: 3px 3px 10px 3px #747474;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedorCheckout form{
+    width: 40%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedorCheckout form label{
+    margin: 3px 0;
+}
+
+.contenedorCheckout form input{
+    border: none;
+    border:solid 1px #ccc;
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 28px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.contenedorCheckout form button{
+    margin-top: 30px;
+    font-size: 20px;
+    background-color: #085cd8;
+    color: antiquewhite;
+    min-height: 40px;
+    min-width: 160px;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titleForm{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    padding-left: 6%;
+    padding-top: 3%;
+}
+.contenedorProd{
+    width: 40%;
+    /* min-height: 400px; */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    background-color: #cecece;
+    border-radius: 10px;
+    border: 2px solid #c1c1c1;
+}
+
+.dataProducts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.checkoutProducts h2{
+    padding-left: 2%;
+}
+.contenedorProd h3{
+    padding-left:2% ;
+}
+.resumenProductos div ul li{
+    margin-left: 7%;
+    list-style: square;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    list-style-image: url('https://res.cloudinary.com/dho3gtxbk/image/upload/v1669229974/proyecto%20react%20coder/tshirt-icon_xphrog.png')
+}

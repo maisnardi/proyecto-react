@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-li{
+.contenedorMenu ul li{
     font-size: 25px;
     display: inline;
     margin: 10px;
