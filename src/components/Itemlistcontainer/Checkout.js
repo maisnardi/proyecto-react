@@ -45,9 +45,10 @@ const Checkout = () => {
         .catch((error)=>{
             console.log('Error en la compra', error)
         })
-        // .finally(()=>{
-        //     setLoading(false);
-        // })
+        .finally(()=>{
+            console.log("entro al finally")
+            // setLoading(false);
+        })
     };
     if(orderId){
         return(

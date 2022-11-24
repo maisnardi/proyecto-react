@@ -14,8 +14,6 @@ const Cart = () => {
         <Link className='botonProductos' to={'/'}>Volver a la lista de productos</Link>
       </div>
     )
-
-
   }
   return (
     <div className='contenedorCarrito'>
@@ -24,10 +22,10 @@ const Cart = () => {
           <div className='cartImg'>
             <img src={prod.img} alt={prod.title}/>
           </div>       
-          <div>
+          <div className='contenedorPropiedades'>
             <h3>Producto: {prod.title}</h3>
             <h3>Cantidad: {prod.cantidad}</h3>
-            <h3>Precio por unidad: {prod.price}</h3>
+            <h3>Precio por unidad: ${prod.price}</h3>
           </div>
           <div>
             <button className='eliminarUnidad' onClick={() => deleteOne(prod.id)}>Quitar producto</button>

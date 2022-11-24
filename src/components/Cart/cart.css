@@ -7,7 +7,15 @@
     flex-direction: column;
 }
 .eliminarUnidad{
-    max-height: 20px;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 10px 3px #b2acac;
+    -moz-box-shadow: 3px 3px 10px 3px #b2acac;
+    box-shadow: 3px 3px 10px 3px #b2acac;
+    background-color: #b65838;
+    border: none;
+    font-family: 'Poppins', sans-serif;
 }
 .itemCarrito{
     border: 2px dotted blue ;
@@ -25,6 +33,7 @@
 }
 .cartImg img{
     max-height: 100px;
+    padding-left:20px ;
 }
 
 .contenedorTotales{
@@ -52,4 +61,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .contenedorPropiedades{
+    margin:0 300px;
   }

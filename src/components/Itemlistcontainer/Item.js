@@ -10,8 +10,11 @@ const Item = ({producto}) => {
         <div className='separador'></div>
       </div>
       <div className='contenedorDatosItem' >
-        <h2>{producto.title}</h2>
-        <h3>Precio: ${producto.price}</h3>
+        <div>
+          <h2>{producto.title}</h2>
+          <h3>Precio: ${producto.price}</h3>
+
+        </div>
       </div>
       <article className='contenedorVerProducto'>
           <Link to={`/item/${producto.id}`}><button>Ver producto</button></Link>

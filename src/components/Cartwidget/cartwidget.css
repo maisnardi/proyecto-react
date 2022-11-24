@@ -1,11 +1,13 @@
 .material-symbols-outlined{
-    color: rgb(61, 52, 223);
+    color: #b65838;
     margin-right: 10px;
     margin-top: 5px;
-    font-size: 35px;
+    font-size: 30px;
     padding-left: 12px;
 }
 .muestraUnidades{
     font-size: 30px;
     padding-right: 20px;
+    color: #b65838;
+    font-family: 'Poppins', sans-serif;
 }

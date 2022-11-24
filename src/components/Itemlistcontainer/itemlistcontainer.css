@@ -11,15 +11,14 @@
     max-width: 65%;
     margin: 0 auto;
     border: 2px solid black;
+    border-radius: 10px;
 }
 .contenedorFiltro{
     display: flex;
     justify-content: flex-start;
-    /* min-width: 264px;
-    max-width: 264px; */
     width: 20%;
 }
-.containerItems{
+.contenedorItemList{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
