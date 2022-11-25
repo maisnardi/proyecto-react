@@ -1,31 +1,3 @@
-.contenedorBotTalles{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-/* .contenedorBotTalles button{
-    min-width: 50px;
-    min-height: 50px;
-    border-radius: 15px;
-    font-size: 18px;
-    color: black;
-    border: 2px solid white;
-} */
-.contenedorColores{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-/* .contenedorColores button{
-    min-width: 50px;
-    min-height: 50px;
-    border-radius: 25px;
-    border: 2px solid white;
-} */
 .botonRojo{
     background: #f70303;
     background: -webkit-linear-gradient(247deg, #f70303 0%, #ac6a6a 100%);
@@ -64,7 +36,7 @@
 .botonVerde{
     background-color: #3b8f36;
     background: -webkit-linear-gradient(247deg, #3b8f36 0%, rgb(31, 66, 9) 100%);
-    background: linear-gradient(247deg, #3b8f36 0%,  rgb(76, 36, 4) 100%);
+    background: linear-gradient(247deg, #3b8f36 0%,  rgb(31, 66, 9) 100%);
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
 }
@@ -74,4 +46,7 @@
     background: linear-gradient(247deg, #ded2ad 0%,  rgb(130, 111, 59) 100%);
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
+}
+.buttonClick button{
+    border: 2px solid black;
 }

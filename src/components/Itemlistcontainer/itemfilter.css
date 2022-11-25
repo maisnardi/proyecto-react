@@ -8,74 +8,13 @@
 .botonTalle{
     min-width: 40px;
     min-height: 40px;
-    border-radius: 15px;
-    border: 2px solid white;
-}
-.contenedorColores{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.contenedorColores button{
-    min-width: 40px;
-    min-height: 40px;
     border-radius: 25px;
     border: 2px solid white;
 }
-.botonRojo{
-    background: #f70303;
-    background: -webkit-linear-gradient(247deg, #f70303 0%, #ac6a6a 100%);
-    background: linear-gradient(247deg, #f70303 0%, #ac6a6a 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
-.botonAzul{
-    background: blue;
-    background: -webkit-linear-gradient(247deg, blue 0%, rgb(19, 37, 157) 100%);
-    background: linear-gradient(247deg, blue 0%, rgb(19, 37, 157) 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
-.botonBlanco{
-    background-color: white;
-    background: -webkit-linear-gradient(247deg, white 0%, rgb(229, 229, 229) 100%);
-    background: linear-gradient(247deg, white 0%,  rgb(229, 229, 229) 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
-.botonGris{
-    background-color: grey;
-    background: -webkit-linear-gradient(247deg, grey 0%, rgb(57, 56, 56) 100%);
-    background: linear-gradient(247deg, grey 0%, rgb(57, 56, 56) 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
-.botonMarron{
-    background-color: #CA955C;
-    background: -webkit-linear-gradient(247deg, #CA955C 0%, rgb(76, 36, 4) 100%);
-    background: linear-gradient(247deg, #CA955C 0%,  rgb(76, 36, 4) 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
-.botonVerde{
-    background-color: #3b8f36;
-    background: -webkit-linear-gradient(247deg, #3b8f36 0%, rgb(31, 66, 9) 100%);
-    background: linear-gradient(247deg, #3b8f36 0%,  rgb(31, 66, 9) 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
-.botonVeige{
-    background-color: #ded2ad;
-    background: -webkit-linear-gradient(247deg, #ded2ad 0%, rgb(130, 111, 59) 100%);
-    background: linear-gradient(247deg, #ded2ad 0%,  rgb(130, 111, 59) 100%);
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-}
+
 .clicked{
     min-width: 40px;
     min-height: 40px;
-    border-radius: 15px;
+    border-radius: 25px;
     border: 2px solid black;
 }

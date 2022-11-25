@@ -14,9 +14,13 @@ function ItemListContainer({saludo}) {
   const [loading, setLoading] = useState(true);
   const {id}= useParams();
   const [size,setSize] = useState('');
+  const [color,setColor] = useState('');
 
   const sizeFilter = (tamaño)=>{
     setSize(tamaño);
+  }
+  const colorFilter =(colorBoton)=>{
+    setColor(colorBoton)
   }
 
   useEffect(() => {
@@ -97,7 +101,7 @@ function ItemListContainer({saludo}) {
       <h1 className='saludoInicio'>{saludo}</h1>
       <div className='contenedorMain'>
         <div className='contenedorFiltro'>
-          <ItemFilter sizeFilter={sizeFilter}/>
+          <ItemFilter colorFilter={colorFilter} sizeFilter={sizeFilter} items={items}/>
         </div>
         <div className='contenedorItemList'>
           <ItemList items={items} />

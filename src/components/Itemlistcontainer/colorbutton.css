@@ -1,0 +1,13 @@
+.contenedorColores{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.contenedorColores button{
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 25px;
+    border: 2px solid white;
+}

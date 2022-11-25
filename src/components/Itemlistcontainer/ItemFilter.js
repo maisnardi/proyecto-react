@@ -1,38 +1,61 @@
-import React from 'react'
-import './itemfilter.css'
-import { useState } from 'react'
+import React from 'react';
+import './itemfilter.css';
+import { useState } from 'react';
+import ColorButton from './ColorButton';
 
-const ItemFilter = ({sizeFilter}) => {
-  const [style,setStyle] = useState("botonTalle")
-  // const [sizeM,setSizeM] = useState('')
-  // const handleSizeM = (e)=>setSizeM(e.target.value);
-  // const changeStyle = (estilo)=>{
-  //   setStyle(estilo)
-  // }
 
+const ItemFilter = ({sizeFilter,items,colorFilter}) => {
+  const [styleS,setStyleS] = useState("botonTalle")
+  const [styleM,setStyleM] = useState("botonTalle")
+  const [styleL,setStyleL] = useState("botonTalle")
+  // const [styleRed, setStyleRed] = useState("botonRojo")
+  
+  const changeStyle = (buttonSize)=>{
+    if(buttonSize==="S"){
+      setStyleM("botonTalle");
+      setStyleL("botonTalle");
+      setStyleS("clicked")
+    }
+    else if(buttonSize==="M"){
+      setStyleM("clicked");
+      setStyleL("botonTalle");
+      setStyleS("botonTalle")
+    }
+    else if(buttonSize==="L"){
+      setStyleM("botonTalle");
+      setStyleL("clicked");
+      setStyleS("botonTalle")
+    }
+    else{
+      setStyleM("botonTalle");
+      setStyleL("botonTalle");
+      setStyleS("botonTalle");
+    }
+  }
+
+
+  const deleteFilter=()=>{
+    setStyleM("botonTalle");
+    setStyleL("botonTalle");
+    setStyleS("botonTalle");
+    sizeFilter("");
+  }
   return (
     <div>
       <h2>Filtrar por:</h2>
       <div className='contenedorTalle'>
         <h3>Talles:</h3>
         <div className='contenedorBotTalles'>
-          <button className={style} onClick={()=>{sizeFilter("S"); changeStyle("clicked")}}>S</button>
-          {/* <input type="checkbox" className='botonTalle' onClick={handleSizeM()} name="talleM" value="sizeM"></input> */}
-          <button className='botonTalle' onClick={()=>sizeFilter("L")}>L</button>
+          <button className={styleS} onClick={()=>{sizeFilter("S"); changeStyle("S")}}>S</button>
+          <button className={styleM} onClick={()=>{sizeFilter("M"); changeStyle("M")}}>M</button>
+          <button className={styleL} onClick={()=>{sizeFilter("L"); changeStyle("L")}}>L</button>
         </div>
       </div>
       <h3>Colores:</h3>
-      <div className='contenedorColores'>
-        <button className='botonRojo'></button>
-        <button className='botonAzul'></button>
-        <button className='botonBlanco'></button>
-        <button className='botonGris'></button>
-        <button className='botonMarron'></button>
-        <button className='botonVerde'></button>
-        <button className='botonVeige'></button>
-      </div>
+      <ColorButton colorFilter={colorFilter} items={items}/>   
+      <button onClick={()=>{ deleteFilter()}}>Limpiar Filtros</button>
     </div>
-  )
+   )
 }
 
 export default ItemFilter
