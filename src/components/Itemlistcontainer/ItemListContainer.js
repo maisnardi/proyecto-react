@@ -11,16 +11,37 @@ import { db } from '../../services/firebaseConfig';
 
 function ItemListContainer({saludo}) {
   const [items, setItems] = useState([]);
-  const [loading, setLoading]= useState(true)
+  const [loading, setLoading] = useState(true);
   const {id}= useParams();
+  const [size,setSize] = useState('');
+
+  const sizeFilter = (tamaño)=>{
+    setSize(tamaño);
+  }
 
   useEffect(() => {
     const collectionProd = collection(db, 'productos');
     // const q =query(collectionProd, where("category", "==" , id));
     // console.log(q)
-    console.log(typeof(id))
-    const selector = id? query(collectionProd, where("category", "==" , id)) :collectionProd;
-
+    console.log((collectionProd))
+    let selector;
+    if(id && size)
+    {
+      selector = query(collectionProd, where("category", "==" , id),where("size", "==" , size));
+    }
+    else if (!id && size)
+    {
+      selector = query(collectionProd,where("size", "==" , size));
+    }
+    else if (id && !size)
+    {
+      selector = query(collectionProd,where("category", "==" , id));
+    }
+    else
+    {
+      selector=collectionProd;
+    }
+    console.log (size)
     getDocs(selector)
       .then((res)=>{
        const products = res.docs.map((prod)=>{
@@ -60,7 +81,9 @@ function ItemListContainer({saludo}) {
     //     setLoading(false);
     //   }); 
     //   return ()=> setLoading(true)  
-  }, [id]);
+  }, [id,size]);
+
+  
 
   if(loading){
     return(
@@ -74,7 +97,7 @@ function ItemListContainer({saludo}) {
       <h1 className='saludoInicio'>{saludo}</h1>
       <div className='contenedorMain'>
         <div className='contenedorFiltro'>
-          <ItemFilter/>
+          <ItemFilter sizeFilter={sizeFilter}/>
         </div>
         <div className='contenedorItemList'>
           <ItemList items={items} />

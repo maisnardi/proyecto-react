@@ -5,7 +5,7 @@
     gap: 10px;
     margin-top: 20px;
 }
-.contenedorBotTalles button{
+.botonTalle{
     min-width: 40px;
     min-height: 40px;
     border-radius: 15px;
@@ -72,4 +72,10 @@
     background: linear-gradient(247deg, #ded2ad 0%,  rgb(130, 111, 59) 100%);
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
+}
+.clicked{
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 15px;
+    border: 2px solid black;
 }

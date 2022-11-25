@@ -16,8 +16,10 @@ const Checkout = () => {
     const [email, setEmail] = useState('');
     const [verificatioEmail, setVerificationEmail] = useState('');
     const [orderId,setOrderId] = useState('');
-    // const [loading, setLoading]= useState(true)
+    const [loading, setLoading]= useState(false)
 
+    console.log("email");
+    console.log(email);
     const handleName = (e)=>setName(e.target.value);
     const handleLastName = (e)=>setLastName(e.target.value);
     const handlePhone = (e)=>setPhone(e.target.value);
@@ -27,6 +29,7 @@ const Checkout = () => {
 
     const enviarDatos = (e)=>{
         e.preventDefault();
+        setLoading(true)
    
         const objOrden = {
             buyer: {name,lastName,phone,adress,email},
@@ -45,10 +48,9 @@ const Checkout = () => {
         .catch((error)=>{
             console.log('Error en la compra', error)
         })
-        .finally(()=>{
-            console.log("entro al finally")
-            // setLoading(false);
-        })
+        .finally(() => {
+            setLoading(false);
+        });
     };
     if(orderId){
         return(
@@ -59,12 +61,12 @@ const Checkout = () => {
         )
     }
 
-    // if(loading){
-    //     return(
-    //       <div className='contenedorSpinner'>
-    //         <ScaleLoader color="#ad6d32" height={60}  />
-    //       </div>
-    //       )};
+    if(loading){
+        return(
+          <div className='contenedorSpinner'>
+            <ScaleLoader color="#ad6d32" height={60}  />
+          </div>
+          )};
 
     return (
     <div className='contenedorCheckout'>
@@ -83,7 +85,7 @@ const Checkout = () => {
                 <input type="email" placeholder='rodriguez@gmail.com' name='mail1' onChange={handleEmail} value={email} required></input>
                 <label >Vuelva a escribir su correo electrónico</label>
                 <input type="email" placeholder='rodriguez@gmail.com' name='mail2' onChange={handleVerificationEmail} value={verificatioEmail} required></input>
-                <button disabled={email !== verificatioEmail} style={{ backgroundColor: (email !== verificatioEmail)? 'grey':'#085cd8' }} >Finalizar compra</button>
+                <button disabled={email !== verificatioEmail} style={{ backgroundColor: (email !== verificatioEmail || name ==='' || lastName==='' || adress ===''|| phone ===''|| email ==='' || verificatioEmail ==='')? 'grey':'#085cd8' }} >Finalizar compra</button>
             </form>
             <div className='contenedorProd'>
                 <div className='checkoutProducts'> 
