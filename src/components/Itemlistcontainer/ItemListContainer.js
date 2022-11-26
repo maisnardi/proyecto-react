@@ -22,25 +22,46 @@ function ItemListContainer({saludo}) {
   const colorFilter =(colorBoton)=>{
     setColor(colorBoton)
   }
-
+  const resetFilter = ()=>{
+    setColor("");
+    setSize("");
+  }
   useEffect(() => {
     const collectionProd = collection(db, 'productos');
     // const q =query(collectionProd, where("category", "==" , id));
     // console.log(q)
+    console.log(typeof(color))
     console.log((collectionProd))
     let selector;
-    if(id && size)
+    if(id && size && color)
+    {
+      selector = query(collectionProd, where("category", "==" , id),where("size", "==" , size),where("color", "==" , color));
+    }
+    else if (!id && size && color)
+    {
+      selector = query(collectionProd,where("size", "==" , size),where("color", "==" , color));
+    }
+    else if (id && !size && color)
+    {
+      selector = query(collectionProd,where("category", "==" , id),where("color", "==" , color));
+    }
+    else if(id && size && !color)
     {
       selector = query(collectionProd, where("category", "==" , id),where("size", "==" , size));
     }
-    else if (!id && size)
+    else if (!id && size && !color)
     {
       selector = query(collectionProd,where("size", "==" , size));
     }
-    else if (id && !size)
+    else if (id && !size && !color)
     {
       selector = query(collectionProd,where("category", "==" , id));
     }
+    else if (!id && !size && color)
+    {
+      selector = query(collectionProd,where("color", "==" , color));
+    }
+
     else
     {
       selector=collectionProd;
@@ -85,7 +106,7 @@ function ItemListContainer({saludo}) {
     //     setLoading(false);
     //   }); 
     //   return ()=> setLoading(true)  
-  }, [id,size]);
+  }, [id,size,color]);
 
   
 
@@ -101,7 +122,7 @@ function ItemListContainer({saludo}) {
       <h1 className='saludoInicio'>{saludo}</h1>
       <div className='contenedorMain'>
         <div className='contenedorFiltro'>
-          <ItemFilter colorFilter={colorFilter} sizeFilter={sizeFilter} items={items}/>
+          <ItemFilter colorFilter={colorFilter} sizeFilter={sizeFilter} items={items} resetFilter={resetFilter}/>
         </div>
         <div className='contenedorItemList'>
           <ItemList items={items} />

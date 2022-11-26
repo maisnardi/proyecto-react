@@ -17,6 +17,7 @@
     display: flex;
     justify-content: flex-start;
     width: 20%;
+    font-family: 'Poppins', sans-serif;
 }
 .contenedorItemList{
     display: flex;

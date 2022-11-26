@@ -4,11 +4,10 @@ import { useState } from 'react';
 import ColorButton from './ColorButton';
 
 
-const ItemFilter = ({sizeFilter,items,colorFilter}) => {
+const ItemFilter = ({sizeFilter,items,colorFilter,resetFilter}) => {
   const [styleS,setStyleS] = useState("botonTalle")
   const [styleM,setStyleM] = useState("botonTalle")
   const [styleL,setStyleL] = useState("botonTalle")
-  // const [styleRed, setStyleRed] = useState("botonRojo")
   
   const changeStyle = (buttonSize)=>{
     if(buttonSize==="S"){
@@ -38,7 +37,7 @@ const ItemFilter = ({sizeFilter,items,colorFilter}) => {
     setStyleM("botonTalle");
     setStyleL("botonTalle");
     setStyleS("botonTalle");
-    sizeFilter("");
+  
   }
   return (
     <div>
@@ -53,7 +52,7 @@ const ItemFilter = ({sizeFilter,items,colorFilter}) => {
       </div>
       <h3>Colores:</h3>
       <ColorButton colorFilter={colorFilter} items={items}/>   
-      <button onClick={()=>{ deleteFilter()}}>Limpiar Filtros</button>
+      <button className='resetButton' onClick={()=>{ resetFilter();deleteFilter()}}>Limpiar Filtros</button>
     </div>
    )
 }

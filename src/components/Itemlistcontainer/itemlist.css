@@ -6,3 +6,12 @@
     align-items: stretch;
     gap: 60px 40px;
 }
+.resetButton{
+    margin-top:10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    background-color: #085cd8;
+    color:white;
+    border:2px solid white
+}

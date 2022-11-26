@@ -4,15 +4,11 @@ import './circlebutton.css'
 
 
 const CircleButton = ({producto,colorFilter}) => {
-  const [color, setColor] = useState(`contenedor${producto.color}`)
-  const changeClass=()=>{
-    setColor("buttonClick");
-  }
-
+  const [color, setColor] = useState(`${producto.color}`)
+   
   return (
     <div className={color}>
-        {/* <button className={`boton${producto.color}`} onClick={()=>{colorFilter(producto.color); changeClass()}}></button> */}
-        <input className={`boton${producto.color}`} type="radio" name="color" value={color}></input>
+        <button className={`boton${producto.color}`} onClick={()=>{colorFilter(producto.color);setColor(producto.color)}}></button>
     </div>
   )
 }
