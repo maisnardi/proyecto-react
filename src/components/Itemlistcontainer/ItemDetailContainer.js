@@ -29,27 +29,7 @@ function ItemDatailContaiener() {
           .finally(() => {
               setLoading(false);
           });
-
-
-        // const getProduct = () => {
-        //     const producto = productos.find((prod) => prod.id===(Number(id)))
-        //     return new Promise((res, rej) => {
-        //         setTimeout(() => {
-        //             res(producto);
-        //         }, 2000);
-        //     });
-        // };
-        // getProduct()
-        //     .then((res) => {
-        //         setItem(res);
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     })
-        //     .finally(()=>{
-        //       setLoading(false);
-        //     });
-
+          
         return ()=> setLoading(true)
     }, [id]);
 

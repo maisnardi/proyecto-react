@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import './circlebutton.css'
 
-
 const CircleButton = ({producto,colorFilter}) => {
   const [color, setColor] = useState(`${producto.color}`)
    

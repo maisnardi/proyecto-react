@@ -18,8 +18,6 @@ const Checkout = () => {
     const [orderId,setOrderId] = useState('');
     const [loading, setLoading]= useState(false)
 
-    console.log("email");
-    console.log(email);
     const handleName = (e)=>setName(e.target.value);
     const handleLastName = (e)=>setLastName(e.target.value);
     const handlePhone = (e)=>setPhone(e.target.value);
@@ -38,9 +36,9 @@ const Checkout = () => {
             date: serverTimestamp(),
         };
         const orderCollection = collection(db,"orders");
+        
         addDoc(orderCollection,objOrden)
         .then((res)=>{
-            console.log(res);
             setOrderId(res.id);
             deleteAll();
             

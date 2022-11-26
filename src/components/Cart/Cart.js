@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const {cart,deleteAll,totalUnidades,totalPrecio,deleteOne}=useContext(CartContext);
-  console.log(cart)
   if(cart.length===0){
     return (
       <div className='contenedorSinProd' >

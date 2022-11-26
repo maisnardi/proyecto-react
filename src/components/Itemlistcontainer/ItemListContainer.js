@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-// import { productos } from '../../mock/productos';
 import './itemlistcontainer.css'
 import ItemList from './ItemList';
 import {useParams} from 'react-router-dom'
@@ -28,10 +27,6 @@ function ItemListContainer({saludo}) {
   }
   useEffect(() => {
     const collectionProd = collection(db, 'productos');
-    // const q =query(collectionProd, where("category", "==" , id));
-    // console.log(q)
-    console.log(typeof(color))
-    console.log((collectionProd))
     let selector;
     if(id && size && color)
     {
@@ -66,7 +61,7 @@ function ItemListContainer({saludo}) {
     {
       selector=collectionProd;
     }
-    console.log (size)
+    
     getDocs(selector)
       .then((res)=>{
        const products = res.docs.map((prod)=>{
@@ -83,32 +78,7 @@ function ItemListContainer({saludo}) {
       .finally(()=>{
         setLoading(false);
       })
-
-
-    // const getProducts = () => {
-    //   return new Promise((res, rej) => {
-    //     const productosFiltrados = productos.filter((productos)=>productos.category === id)
-    //     const ref = id ? productosFiltrados : productos
-    //     setTimeout(() => {
-    //       res(ref);
-    //     }, 2000);
-    //   });
-    // };
-        
-    // getProducts()
-    //   .then((res) => {
-    //     setItems(res);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   })
-    //   .finally(()=>{
-    //     setLoading(false);
-    //   }); 
-    //   return ()=> setLoading(true)  
   }, [id,size,color]);
-
-  
 
   if(loading){
     return(
