@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Proyecto E-Comerse Curso React Coderhouse 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue desarrollado en React para el curso de React de Coderhouse comisión 45060. Se trata de un e-comerse de ropa. En el que se pueden ver todos los productos a la venta.
 
-## Available Scripts
+La base de datos de los productos se encuentra alojada en [Firebase](https://firebase.google.com/?hl=es).
 
-In the project directory, you can run:
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477314/proyecto%20react%20coder/capturas%20de%20pantalla/index_objymf.png)
 
-### `npm start`
+La pantalla de inicio cuenta con:
++	Logo de la marca en la esquina superior izquierda.
++	Un menú de navegación en la parte superior derecha.
++	Mensaje de bienvenida.
++	Filtro lateral por talle o por color.
++	Lista de productos en formato de grilla.
++	Footer con redes sociales de contacto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Desde el menú de navegación se pueden acceder a todas las categorías de productos y al carrito de compras. El carrito de compras cuenta con un indicador que muestra la cantidad de productos agregados. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477811/proyecto%20react%20coder/capturas%20de%20pantalla/nabvar_zng5yc.png)
 
-### `npm test`
+Desde el filtro lateral se puede refinar la búsqueda por talle o por color y un botón para limpiar los filtros.
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477812/proyecto%20react%20coder/capturas%20de%20pantalla/filtros_a1i0ov.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El filtrado es dinámico.
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477812/proyecto%20react%20coder/capturas%20de%20pantalla/filtradodinamico_x5bxvi.png)
 
-### `npm run build`
+Haciendo clic en el botón de Ver Producto se accede al detalle del producto. Donde se puede ver una descripción del producto y agregar al carrito la cantidad a comprar. Se pueden agregar de a una o varias unidades al mismo tiempo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477812/proyecto%20react%20coder/capturas%20de%20pantalla/detalle_wgn8lv.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Veremos:
++   Imagen del producto.
++   Título del producto.
++   Precio del producto.
++   Talle del producto.
++   Contador para sumar unidades al carrito.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+El contador de agregar producto al carrito no permitirá agregar un numero de elementos que supere el numero de Stock de ese producto.
+Luego de agregar un ítem al carrito aparecerán dos mensajes uno que avisa que el producto se agrego al carrito y otro que indica la cantidad de elementos de ese producto que ya están en el carrito.
 
-### `npm run eject`
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477812/proyecto%20react%20coder/capturas%20de%20pantalla/detalle_2_fzuhjl.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Si el usuario vuelve a ingresar a este producto se le mostrara un mensaje en el que le indica que ese producto ya se encuentra en el carrito y la cantidad de unidades.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Continuando al carrito de compras:
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477811/proyecto%20react%20coder/capturas%20de%20pantalla/cart_qu42ob.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+En pantalla se puede ver:
++	Imagen del producto.
++	Resumen del producto: Titulo, unidades y precio por unidades.
++	Botón para quitar todas las unidades de un mismo producto.
++	Total de unidades del carrito.
++	Costo total del carrito en pesos.
++	Botón para vaciar el carrito.
++	Botón para finalizar la compra y pasar al Checkout.
+Si se eliminan todos los productos del carrito aparece un mensaje indicando que no hay productos y un botón para regresar al home.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477811/proyecto%20react%20coder/capturas%20de%20pantalla/cart-vacio_ziahi9.png)
 
-## Learn More
+Si luego de tener el carrito cargado continuamos con la compra pasaremos al Checkout.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477811/proyecto%20react%20coder/capturas%20de%20pantalla/checkout_ghmqwr.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Allí encontraremos:
++	Formulario para que el usuario complete sus datos.
++	Resumen de la compra.
 
-### Code Splitting
+Este formulario cuenta con campos obligatorios y una validación del correo electrónico. Los inputs de Teléfono y correo tienen una validación de formato. El número de teléfono ingresado se compara con una mascara que en este caso fue configurada para números de celular de buenos aires. Con las direcciones de correo electrónico se verifica que lo ingresado por el cliente cuente con un @.
+El botón de finalizar compra se encuentra deshabilitado y grisado hasta que el cliente complete todos los campos del formulario. Si los correos electrónicos no coinciden el botón también queda deshabilitado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477811/proyecto%20react%20coder/capturas%20de%20pantalla/checkout_-completo_baradb.png)
 
-### Analyzing the Bundle Size
+Del lado derecho se encuentra un resumen de la compra, donde figuran los productos con sus cantidades y el costo total de la compra expresada en pesos.
+Luego de hacer clic en el botón finalizar aparecerá una pantalla de carga y luego de unos segundos el cliente recibe por pantalla un mensaje de “Gracias por su compra” y un numero de orden de compra. Los datos del comprador son almacenados en Firebase. Este número de compra es el id que nos da Firebase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![](https://res.cloudinary.com/dho3gtxbk/image/upload/v1669477811/proyecto%20react%20coder/capturas%20de%20pantalla/mensaje_final_g1hrvc.png)
 
-### Making a Progressive Web App
+De esta forma finaliza la compra.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Librerias Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
++   [react-router-dom](https://reactrouter.com/en/main): Se utilizó para manejo de rutas dentro del proyecto.
++   [react-spinners](https://www.npmjs.com/package/react-spinners): Se utilizó para los efectos de carga del proyecto.
++   [firebase](https://firebase.google.com/?hl=es): Se utilizó para almacenar la base de datos del proyecto.
++	[Google fonts](https://fonts.google.com/about):Se utilizó para darle estilos a los textos.
 
-### Deployment
+### Repositorio GitHub
+[GitHub - maisnardi](https://github.com/maisnardi/proyecto-react)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+# Preparación para jecutar la App localmente
+## 1.Clonar repositorio
+```
+git clone https://github.com/maisnardi/proyecto-react
+```
+## 2.Instalar dependencias:
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ya esta todo listo para ejecutar la App. 
+
+## 3.Ejecutar la app
+```
+npm start
+``` 
+
+Tras unos segundos se abrirá la aplicación dentro del navegador.
+
+# Consideraciones para la carga de productos:
+Campos:
++   id tipo string
++	category tipo string
++	color tipo string
++	img tipo string 
++	Price tipo number
++	size tipo string
++	stock tipo numer
++	title tipo string
+
+Resolucion recomendada para imagenes 1024x1024px.

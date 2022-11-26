@@ -27,7 +27,7 @@ const Cart = () => {
             <h3>Cantidad: {prod.cantidad}</h3>
             <h3>Precio por unidad: ${prod.price}</h3>
           </div>
-          <div>
+          <div className='contenedorElimUni'>
             <button className='eliminarUnidad' onClick={() => deleteOne(prod.id)}>Quitar producto</button>
           </div>
         </div>
@@ -35,8 +35,8 @@ const Cart = () => {
     <div className='contenedorTotales'>
       <h3>Total unidades: {totalUnidades()}</h3>
       <h3>Total carrito: ${totalPrecio()}</h3>
-      <button onClick={deleteAll}>Vaciar carrito</button>
-      <Link to='/checkout'> Finalizar compra </Link>
+      <button className='botFinalizar' onClick={deleteAll}>Vaciar carrito</button>
+      <Link className='botFinalizar' to='/checkout'> Finalizar compra </Link>
     </div>
 </div>
 );
