@@ -89,7 +89,7 @@ De esta forma finaliza la compra.
 [GitHub - maisnardi](https://github.com/maisnardi/proyecto-react)
 
 
-# Preparación para jecutar la App localmente
+# Preparación para ejecutar la App localmente
 ## 1.Clonar repositorio
 ```
 git clone https://github.com/maisnardi/proyecto-react
